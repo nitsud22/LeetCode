@@ -1,6 +1,6 @@
 <details>
 <summary> Arrays & Hashing </summary>
-###[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
+### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
 ```python
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
