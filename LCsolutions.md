@@ -1,7 +1,7 @@
 <details>
 <summary> <h2>Arrays & Hashing</h2> </summary>
     
-# [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
+### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
     
 ```python    
 class Solution:
@@ -21,7 +21,7 @@ class Solution:
 <details>
 <summary> <h2>Two Pointers</h2> </summary>
 
-# [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)<a name="valid-palindrome"></a>
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)<a name="valid-palindrome"></a>
 
 ```python
     class Solution:
