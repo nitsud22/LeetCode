@@ -1,5 +1,5 @@
 <details>
-<summary> Arrays & Hashing </summary>
+<summary> #### Arrays & Hashing </summary>
     
 ### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
     
