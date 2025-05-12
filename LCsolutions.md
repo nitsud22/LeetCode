@@ -1,5 +1,16 @@
 <details>
 <summary> Arrays & Hashing </summary>
-<br>
-test
-<details>
+###[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        dict_a = {}
+
+        for number in nums:
+            if number not in dict_a:
+                dict_a[number] = 1
+            else:
+                return True
+        
+        return False
+```
