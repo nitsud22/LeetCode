@@ -67,3 +67,38 @@ class Solution:
         return maxProfit
 ```
 </details>
+
+<details>
+<summary> <h2>Stack</h2></summary>
+
+### [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)<a name = "valid-parentheses"></a>
+
+```python
+class Solution:
+    def isValid(self, s: str) -> bool:
+        dict_A = {')':'(','}':'{',']':'['}
+        stack = []
+
+        for char in s:                            
+            if char not in dict_A:                      #if the character is not a key, add to stack
+                stack.append(char)
+            elif stack and stack[-1] == dict_A[char]:   #else if the stack is not empty and the top of the stack is a pair, pop from stack
+                stack.pop()
+            else:                                       #not in dict, stack is empty, or the top is not pair, return False
+                return False
+    
+        
+        if len(stack) == 0:
+            return True
+        else:
+            return False
+```
+
+### Time Complexity
+
+> O(n) — You only iterate through the string once.
+
+### Space Complexity
+
+> O(n) — Stack could store all opening brackets in the worst case.
+</details> 
