@@ -1,2 +1,2 @@
 # LeetCode
-journaling my leetcode attempts, heavily inspired by a friend
+journaling my leetcode attempts, heavily inspired by a friend :)
