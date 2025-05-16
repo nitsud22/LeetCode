@@ -1,7 +1,7 @@
 <details>
 <summary> <h2>Arrays & Hashing</h2> </summary>
     
-### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)<a name="contains-duplicate"></a>
+### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)
     
 ```python    
 class Solution:
@@ -21,7 +21,7 @@ class Solution:
 <details>
 <summary> <h2>Two Pointers</h2> </summary>
 
-### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)<a name="valid-palindrome"></a>
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
 
 ```python
 class Solution:
@@ -47,7 +47,7 @@ class Solution:
 <details>
 <summary> <h2>Sliding Window</h2> </summary>
 
-### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)<a name = "best-time-to-buy-and-sell-stock"></a>
+### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
 ```python
 class Solution:
@@ -71,7 +71,7 @@ class Solution:
 <details>
 <summary> <h2>Stack</h2></summary>
 
-### [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)<a name = "valid-parentheses"></a>
+### [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 
 ```python
 class Solution:
@@ -102,3 +102,63 @@ class Solution:
 
 > O(n) — Stack could store all opening brackets in the worst case.
 </details> 
+
+<details>
+<summary> <h2>Binary Search</h2></summary>
+
+### [Binary Search](https://leetcode.com/problems/binary-search/description/)
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        L = 0
+        R = len(nums) - 1
+        while L <= R:                                   #unitl both pointers converge and include the loop where both pointers are the same value
+            M = (L + R) // 2
+            if nums[M] == target:                       #each loop we want to check if it is the target num first, so we can skip the other lines of code if it is.
+                return M
+            elif nums[M] > target:                      #move right pointer if the checked middle value if greater than target num
+                R = M - 1
+            else:                                       #move left pointer if the checked middle is less than target num
+                L = M + 1
+        return -1
+
+```
+
+### Time Complexity
+
+> O(logn) - You cut the possible iterations in half each loop
+
+### Space Complexity
+
+> O(1) - Uses 3 integers as extra space, L, M, R
+
+</details> 
+
+<details>
+<summary> <h2>Linked List</h2></summary>
+
+### [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        curr = head
+        prev = None
+
+        while curr:
+            temp = curr.next    #temp node set as the curr nodes next node to be used to traverse forward
+            curr.next = prev    #curr node points to previous node, changing the direction of the list
+            prev = curr         #prev node set as the current node
+            curr = temp         #curr becomes the next node
+            
+        return prev   
+```
+
+I have a pretty tough time on linked lists
